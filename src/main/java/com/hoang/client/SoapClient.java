@@ -1,8 +1,10 @@
 package com.hoang.client;
 
-import com.hoang.webservice.User;
-import com.hoang.webservice.UserService;
-import com.hoang.webservice.UserServiceImplService;
+
+
+import webservice.User;
+import webservice.UserService;
+import webservice.UserServiceImplService;
 
 import java.util.Arrays;
 
@@ -35,7 +37,7 @@ public class SoapClient {
         user1.setUsername("gpcoder edited");
         System.out.println("Update User : " + userService.update(user1));
 
-        System.out.println("Get all Users : " + Arrays.asList(userService.getAll()));
+        System.out.println("Get all Users : " + Arrays.asList(userService.getAll().getItem()));
 
         System.out.println("Delete User : " + userService.delete(user1.getId()));
     }
